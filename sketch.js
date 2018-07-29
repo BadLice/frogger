@@ -43,6 +43,7 @@ function initRoads()
   roads[9].initTrunk2();
   roads[10].initTurtle2();
   roads[11].initTrunk3();
+  roads[12].initWin();
 
   for (var i = 0; i < width; i++)
   {

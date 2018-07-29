@@ -21,8 +21,15 @@ class Player
     var coll = this.collision();
     if (this.roadCount > 6)
     {
-      if (!coll[0] || this.x + this.w / 2 < 0 || this.x - this.w / 2 > width)
+      if (!coll[0] || this.x + this.w / 2 < 0 || this.x - this.w / 2 > width || coll[1] instanceof Win)
       {
+        if (coll[1] instanceof Win)
+        {
+          fill(255);
+          textSize(40);
+          text("WIN!", width / 2, height / 2);
+
+        }
         this.die();
       }
       else
@@ -30,6 +37,7 @@ class Player
         //coll[1] -> contiene ll'oggetto con cui è in collisione (tronco o tartaruga)
         if (!this.attached || this.attachedObj != coll[1])
         {
+
           this.attached = true;
           this.attachedObj = coll[1];
           this.attachedDist = this.attachedObj.x - this.x;

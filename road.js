@@ -184,6 +184,13 @@ class Road
   {
     this.objs.push(this.nextTrunk3());
   }
+  initWin()
+  {
+    for (var i = 0; i < 5; i++)
+    {
+      this.objs.push(new Win((width / 5 * i) + (35 * 3) / 2 + 25, this.y + this.h / 2 - 32));
+    }
+  }
 
   nextCar1()
   {
