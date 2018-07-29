@@ -13,7 +13,7 @@ class Obj
   {
     push();
     fill(this.col);
-    stroke(0);
+    stroke(255);
     rectMode(CENTER);
     rect(this.x, this.y, this.w, this.h);
     pop();
