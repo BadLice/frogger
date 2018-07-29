@@ -30,6 +30,8 @@ function initRoads()
   {
     roads[i].col = color(0, 0, 100);
   }
+  roads[12].col = color(0, 255, 0);
+  roads[13].col = color(0, 255, 0);
 
   roads[1].initCars1();
   roads[2].initCars2();
